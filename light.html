@@ -1,0 +1,59 @@
+<html>
+	<head>
+	<style type="text/css">
+		svg { height: 100%; width: 100%;}
+
+		.svg-light .base { fill: hsl(145, 63%, 22%); }
+
+		.svg-light .bulb {
+		  fill: hsl(204, 70%, 23%);
+		  
+		  -webkit-animation-name: glow-blue;
+		  -webkit-animation-duration: 1s;
+		  -webkit-animation-iteration-count: infinite;
+		  -webkit-animation-timing-function: ease-in-out;
+		  -webkit-animation-direction: alternate;
+
+		  animation-name: glow-blue;
+		  animation-duration: 1s;
+		  animation-iteration-count: infinite;
+		  animation-timing-function: ease-in-out;
+		  animation-direction: alternate;
+
+		  -moz-animation: none;
+		}
+
+		@-webkit-keyframes glow-blue {
+		  0% { fill: hsl(204, 80%, 23%); }
+		  100% { fill: hsl(204, 80%, 63%); }
+		}
+
+		@keyframes glow-blue {
+		  0% { fill: hsl(204, 80%, 23%); }
+		  100% { fill: hsl(204, 80%, 63%); }
+		}
+	</style>
+</head>
+<body>
+	<svg class="svg-light" 
+		viewBox="0 0 64 64" 
+		xmlns="http://www.w3.org/2000/svg"
+		>
+
+		<path class="outline"
+			d="M38.178,12.142H25.823v10.723c-1.606,2.67-2.461,6.529-2.461,11.406c0,9.473,4.748,17.587,8.636,17.587c3.889,0,8.641-8.114,8.641-17.587c0-4.881-0.854-8.744-2.461-11.412V12.142z"
+			/>
+
+		<rect class="base"
+			x="29.822"
+			y="16.142"
+			width="4.355"
+			height="4.273"
+		 	/>
+
+		<path class="bulb"
+			d="M31.998,47.768c-1.402-0.959-4.637-6.229-4.637-13.497c0-5.775,1.272-8.566,2.207-9.856h4.858c0.945,1.293,2.213,4.081,2.213,9.856C36.639,41.542,33.402,46.809,31.998,47.768"
+		 	/>
+	</svg>
+</body>
+</html>

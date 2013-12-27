@@ -1,0 +1,86 @@
+<html>
+	<head>
+	<style type="text/css">
+		.svg-bell .fill { fill: hsl(48, 89%, 50%); }
+
+		.svg-bell .group-bell {
+			-webkit-animation-name: bellring;
+			-webkit-animation-duration: 3s; 
+			-webkit-animation-iteration-count: infinite;
+			-webkit-animation-timing-function: ease-in-out;
+			-webkit-animation-delay: -1.5s;
+			-webkit-animation-direction: alternate;
+			-webkit-transform-origin: 50%;
+
+			animation-name: bellring;
+			animation-duration: 3s; 
+			animation-iteration-count: infinite;
+			animation-timing-function: ease-in-out;
+			animation-delay: -1.5s;
+			animation-direction: alternate;
+			transform-origin: 50%;
+
+		}
+
+		@-webkit-keyframes bellring { 
+			0% { -webkit-transform: rotateZ(27deg); }
+			100% { -webkit-transform: rotateZ(-27deg); }
+		}
+
+		@keyframes bellring { 
+			0% { transform: rotateZ(27deg); }
+			100% { transform: rotateZ(-27deg); }
+		}
+
+		.svg-bell .group-striker {
+			-webkit-animation-name: striker;
+			-webkit-animation-duration: 3s; 
+			-webkit-animation-iteration-count: infinite;
+			-webkit-animation-timing-function: linear;
+			-webkit-animation-delay: -1.5s;
+			-webkit-animation-direction: alternate;
+			-webkit-transform-origin: 50%;
+
+			animation-name: striker;
+			animation-duration: 3s; 
+			animation-iteration-count: infinite;
+			animation-timing-function: linear;
+			animation-delay: -1.5s;
+			animation-direction: alternate;
+			transform-origin: 50%;
+		}
+
+		@-webkit-keyframes striker { 
+			0% { -webkit-transform: translateX(3px); }
+			100% { -webkit-transform: translateX(-3px); }
+		}
+	</style>
+</head>
+<body>
+	<svg class="svg-bell" viewBox="0 0 88 72" xmlns="http://www.w3.org/2000/svg">
+		<g class="group-striker">
+			<circle class="outline"
+				cx="43.998" 
+				cy="54.571" 
+				r="7.99"
+				/>
+			<circle class="fill"
+				cx="43.998" 
+				cy="54.567" 
+				r="3.99"
+				/>
+		</g>
+		<g class="group-bell">
+			<path class="outline"
+				d="M71.5,38.184h-3.291l-6.213-21.879c-1.367-4.816-5.951-8.693-10.904-9.514C50.91,3.02,47.812,0,43.996,0c-3.812,0-6.91,3.018-7.092,6.787c-4.957,0.822-9.539,4.697-10.908,9.514l-6.211,21.883h-3.289l-4.498,15.85h19.251H36h15.994h3.963h20.041L71.5,38.184z M40.975,6.611C41.229,5.143,42.455,4,43.996,4c1.543,0,2.77,1.143,3.025,2.615L40.975,6.611z"
+				/>
+			<path class="fill"
+				d="M29.844,17.395c1.045-3.678,5.156-6.783,8.975-6.783l10.355,0.004c3.82,0,7.93,3.105,8.975,6.783l5.902,20.785H23.943L29.844,17.395z"
+				/>
+			<polygon class="fill"
+				points="19.52,42.184 68.477,42.184 70.705,50.033 17.291,50.033"
+				/>
+		</g>
+	</svg>
+</body>
+</html>

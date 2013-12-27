@@ -1,0 +1,232 @@
+<html>
+	<head>
+	<style type="text/css">
+		svg { height: 100%; width: 100%; }
+
+		body { background: #222; }
+
+		.wrapper { 
+		  width: 20%;
+		  float: left;
+		}
+
+		/* BASE COLORS */
+		.svg-light .base { fill: hsl(145, 63%, 22%); }
+
+		.svg-light--blue .bulb { fill: hsl(204, 70%, 23%); }
+		.svg-light--red .bulb {   fill: hsl(6, 63%, 16%); }
+		.svg-light--yellow .bulb { fill: hsl(48, 89%, 20%); }
+		.svg-light--orange .bulb { fill: hsl(28, 90%, 22%); }
+		.svg-light--green .bulb { fill: hsl(145, 83%, 32%); }
+
+		/* ANIMATIONS */
+		.svg-light .bulb {
+			-webkit-animation-duration: 1s;
+			-webkit-animation-iteration-count: infinite;
+			-webkit-animation-timing-function: ease-in-out;
+			-webkit-animation-direction: alternate;
+
+			animation-duration: 1s;
+			animation-iteration-count: infinite;
+			animation-timing-function: ease-in-out;
+			animation-direction: alternate;
+		}
+
+		.svg-light--blue .bulb { 
+			-webkit-animation-name: glow-blue; 
+			animation-name: glow-blue; 
+		}
+
+		.svg-light--red .bulb {
+			-webkit-animation-name: glow-red;
+			-webkit-animation-delay: .5s;
+			-webkit-animation-duration: 1.25s;
+
+			animation-name: glow-red;
+			animation-delay: .5s;
+			animation-duration: 1.25s;
+		}
+
+		.svg-light--yellow .bulb{
+			-webkit-animation-name: glow-red;
+			-webkit-animation-delay: .5s;
+			-webkit-animation-duration: 1.25s;
+
+			animation-name: glow-yellow;
+			animation-delay: 1s;
+			animation-duration: 0.75s;
+		}
+
+		.svg-light--orange .bulb{
+			-webkit-animation-name: glow-orange;
+			-webkit-animation-delay: .5s;
+			-webkit-animation-duration: 1.5s;
+
+			animation-name: glow-orange;
+			animation-delay: .5s;
+			animation-duration: 1.5s;
+		}
+
+		.svg-light--green .bulb{
+			-webkit-animation-name: glow-green;
+			-webkit-animation-delay: 1.25s;
+
+			animation-name: glow-green;
+			animation-delay: 1.25s;
+		}
+
+		@-webkit-keyframes glow-blue {
+			100% { fill: hsl(204, 80%, 73%); }
+		}
+
+		@-webkit-keyframes glow-red {
+			100% { fill: hsl(6, 63%, 56%); }
+		}
+
+		@-webkit-keyframes glow-yellow {
+			100% { fill: hsl(48, 89%, 70%); }
+		}
+
+		@-webkit-keyframes glow-orange {
+			100% { fill: hsl(28, 90%, 62%); }
+		}
+
+		@-webkit-keyframes glow-green {
+			100% { fill: hsl(145, 83%, 56%); }
+		}
+
+		@keyframes glow-blue {
+			100% { fill: hsl(204, 80%, 73%); }
+		}
+
+		@keyframes glow-red {
+			100% { fill: hsl(6, 63%, 56%); }
+		}
+
+		@keyframes glow-yellow {
+			100% { fill: hsl(48, 89%, 70%); }
+		}
+
+		@keyframes glow-orange {
+			100% { fill: hsl(28, 90%, 62%); }
+		}
+
+		@keyframes glow-green {
+			100% { fill: hsl(145, 83%, 56%); }
+		}
+
+	</style>
+</head>
+<body>
+	<div class="wrapper">
+	    <svg class="svg-light svg-light--blue" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+	        <path class="outline"
+	            d="M38.178,12.142H25.823v10.723c-1.606,2.67-2.461,6.529-2.461,11.406c0,9.473,4.748,17.587,8.636,17.587c3.889,0,8.641-8.114,8.641-17.587c0-4.881-0.854-8.744-2.461-11.412V12.142z"
+	            />
+
+	        <rect class="base"
+	            x="29.822" 
+	            y="16.142" 
+	            width="4.355" 
+	            height="4.273"
+	            />
+	        
+	        <path class="bulb"
+	            d="M31.998,47.768c-1.402-0.959-4.637-6.229-4.637-13.497c0-5.775,1.272-8.566,2.207-9.856h4.858c0.945,1.293,2.213,4.081,2.213,9.856C36.639,41.542,33.402,46.809,31.998,47.768"
+	            />
+	    </svg>
+	</div>
+
+	<div class="wrapper">
+	    <svg class="svg-light svg-light--red" 
+	    	viewBox="0 0 64 64"  
+	    	xmlns="http://www.w3.org/2000/svg">
+
+	        <path class="outline"
+				d="M38.178,12.142H25.823v10.723c-1.606,2.67-2.461,6.529-2.461,11.406c0,9.473,4.748,17.587,8.636,17.587c3.889,0,8.641-8.114,8.641-17.587c0-4.881-0.854-8.744-2.461-11.412V12.142z"
+				/>
+
+	        <rect class="base"
+				x="29.822" 
+				y="16.142" 
+				width="4.355" 
+				height="4.273"
+				/>
+
+	        <path class="bulb"
+				d="M31.998,47.768c-1.402-0.959-4.637-6.229-4.637-13.497c0-5.775,1.272-8.566,2.207-9.856h4.858c0.945,1.293,2.213,4.081,2.213,9.856C36.639,41.542,33.402,46.809,31.998,47.768"
+				/>
+
+	    </svg>
+	</div>
+
+	<div class="wrapper">
+	    <svg class="svg-light svg-light--yellow" 
+	    	viewBox="0 0 64 64"  
+	    	xmlns="http://www.w3.org/2000/svg">
+
+	        <path class="outline"
+				d="M38.178,12.142H25.823v10.723c-1.606,2.67-2.461,6.529-2.461,11.406c0,9.473,4.748,17.587,8.636,17.587c3.889,0,8.641-8.114,8.641-17.587c0-4.881-0.854-8.744-2.461-11.412V12.142z"
+				/>
+
+	        <rect class="base"
+				x="29.822" 
+				y="16.142" 
+				width="4.355" 
+				height="4.273"
+				/>
+
+	        <path class="bulb"
+				d="M31.998,47.768c-1.402-0.959-4.637-6.229-4.637-13.497c0-5.775,1.272-8.566,2.207-9.856h4.858c0.945,1.293,2.213,4.081,2.213,9.856C36.639,41.542,33.402,46.809,31.998,47.768"
+				/>
+
+	    </svg>
+	</div>
+
+	<div class="wrapper">
+	    <svg class="svg-light svg-light--orange" 
+	    	viewBox="0 0 64 64"  
+	    	xmlns="http://www.w3.org/2000/svg">
+
+	        <path class="outline"
+				d="M38.178,12.142H25.823v10.723c-1.606,2.67-2.461,6.529-2.461,11.406c0,9.473,4.748,17.587,8.636,17.587c3.889,0,8.641-8.114,8.641-17.587c0-4.881-0.854-8.744-2.461-11.412V12.142z"
+				/>
+	
+	        <rect class="base"
+				x="29.822" 
+				y="16.142" 
+				width="4.355" 
+				height="4.273"
+				/>
+
+	        <path class="bulb"
+				d="M31.998,47.768c-1.402-0.959-4.637-6.229-4.637-13.497c0-5.775,1.272-8.566,2.207-9.856h4.858c0.945,1.293,2.213,4.081,2.213,9.856C36.639,41.542,33.402,46.809,31.998,47.768"
+				/>
+	          
+	    </svg>
+	</div>
+
+	<div class="wrapper">
+	    <svg class="svg-light svg-light--green" 
+	    	viewBox="0 0 64 64" 
+	    	xmlns="http://www.w3.org/2000/svg">
+
+	        <path class="outline"
+				d="M38.178,12.142H25.823v10.723c-1.606,2.67-2.461,6.529-2.461,11.406c0,9.473,4.748,17.587,8.636,17.587c3.889,0,8.641-8.114,8.641-17.587c0-4.881-0.854-8.744-2.461-11.412V12.142z"
+				/>
+
+	        <rect class="base"
+				x="29.822" 
+				y="16.142" 
+				width="4.355" 
+				height="4.273"
+				/>
+
+	        <path class="bulb"
+				d="M31.998,47.768c-1.402-0.959-4.637-6.229-4.637-13.497c0-5.775,1.272-8.566,2.207-9.856h4.858c0.945,1.293,2.213,4.081,2.213,9.856C36.639,41.542,33.402,46.809,31.998,47.768"
+				/>
+	          
+	    </svg>
+	</div>
+</body>
+</html>

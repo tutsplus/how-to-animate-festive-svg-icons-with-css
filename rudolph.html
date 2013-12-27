@@ -1,0 +1,142 @@
+<html>
+	<head>
+	<style type="text/css">
+		svg { height: 100%; width: 100%; }
+
+		.svg-rudolph .face { fill: #bc8c51; }
+		.svg-rudolph .nose { fill: hsl(6, 63%, 46%); }
+		.svg-rudolph .nose-highlight { fill: #ffffff; }
+
+		.svg-rudolph .nose {
+			-webkit-animation-name: nose-glow;
+			-webkit-animation-duration: 6s;
+			-webkit-animation-iteration-count: infinite;
+			-webkit-animation-timing-function: ease-in-out;
+			-webkit-animation-direction: alternate;
+
+			animation-name: nose-glow;
+			animation-duration: 6s;
+			animation-iteration-count: infinite;
+			animation-timing-function: ease-in-out;
+			animation-direction: alternate;
+
+			-moz-animation: none;
+		}
+
+		@-webkit-keyframes nose-glow { 
+			0% { fill: hsl(6, 93%, 16%); }
+			50% { fill: hsl(6, 93%, 56%); }
+			100% { fill: hsl(6, 93%, 56%); }
+		}
+
+		@keyframes nose-glow { 
+			0% { fill: hsl(6, 93%, 16%); }
+			50% { fill: hsl(6, 93%, 56%); }
+			100% { fill: hsl(6, 93%, 56%); }
+		}
+
+		.svg-rudolph .nose-highlight {
+			fill-opacity: 0;
+
+			-webkit-animation-name: highlight-fade;
+			-webkit-animation-duration: 6s;
+			-webkit-animation-iteration-count: infinite;
+			-webkit-animation-timing-function: ease-in-out;
+			-webkit-animation-direction: alternate;
+
+			animation-name: highlight-fade;
+			animation-duration: 6s;
+			animation-iteration-count: infinite;
+			animation-timing-function: ease-in-out;
+			animation-direction: alternate;
+
+			-moz-animation: none;
+		}
+
+		@-webkit-keyframes highlight-fade { 
+			0% { fill-opacity: 0; }
+			25% { fill-opacity: 0; }
+			100% { fill-opacity: 1; }
+		}
+
+		@keyframes highlight-fade { 
+			0% { fill-opacity: 0; }
+			25% { fill-opacity: 0; }
+			100% { fill-opacity: 1; }
+		}
+
+		.svg-rudolph .eye {
+			-webkit-animation-name: blink;
+			-webkit-animation-duration: 8s;
+			-webkit-animation-iteration-count: infinite; 
+			-webkit-transform-origin: 50%;
+
+			animation-name: blink;
+			animation-duration: 8s;
+			animation-iteration-count: infinite; 
+			transform-origin: 50%;
+
+			-moz-animation: none;
+		}
+
+		@-webkit-keyframes blink { 
+			0% { -webkit-transform: scaleX(1) scaleY(1); } 
+			1% { -webkit-transform: scaleX(1.3) scaleY(0.1); } 
+			2% { -webkit-transform: scaleX(1) scaleY(1); } 
+			60% { -webkit-transform: scaleX(1) scaleY(1); } 
+			61% { -webkit-transform: scaleX(1.3) scaleY(0.1);} 
+			62% { -webkit-transform: scaleX(1) scaleY(1); } 
+			100% { -webkit-transform: scaleX(1) scaleY(1); }
+		}
+
+
+		@keyframes blink { 
+			0% { transform: scaleX(1) scaleY(1); } 
+			1% { transform: scaleX(1.3) scaleY(0.1); } 
+			2% { transform: scaleX(1) scaleY(1); } 
+			60% { transform: scaleX(1) scaleY(1); } 
+			61% { transform: scaleX(1.3) scaleY(0.1);} 
+			62% { transform: scaleX(1) scaleY(1); } 
+			100% { transform: scaleX(1) scaleY(1); }
+		}
+
+	</style>
+</head>
+<body>
+	<svg class="svg-rudolph" 
+		viewBox="0 0 64 64" 
+		xmlns="http://www.w3.org/2000/svg">
+		<path class="outline"
+		    d="M51.195,16.535c1.369,0,2.742-0.26,4.053-0.779c2.725-1.082,4.863-3.158,6.021-5.848c0.438-1.014-0.029-2.189-1.045-2.627c-1.015-0.439-2.189,0.025-2.627,1.045c-0.736,1.707-2.097,3.025-3.824,3.711c-1.09,0.436-2.242,0.551-3.375,0.418l2.414-5.588c0.438-1.014-0.029-2.191-1.043-2.629c-1.015-0.438-2.191,0.031-2.629,1.043l-2.414,5.584c-2.287-1.932-3.177-5.184-1.931-8.07c0.438-1.014-0.028-2.191-1.043-2.629c-1.019-0.436-2.188,0.031-2.629,1.043c-2.127,4.924-0.338,10.553,3.965,13.442l-2.965,6.863C39.21,19.383,35.757,18.2,31.999,18.2s-7.209,1.184-10.125,3.314l-2.963-6.855c1.834-1.227,3.26-2.963,4.09-5.057c1.08-2.725,1.035-5.705-0.127-8.393c-0.439-1.016-1.607-1.482-2.631-1.043c-1.014,0.439-1.479,1.615-1.041,2.631c0.738,1.705,0.768,3.6,0.08,5.33c-0.432,1.09-1.135,2.008-2.008,2.74L14.861,5.28c-0.439-1.016-1.615-1.484-2.629-1.043c-1.014,0.438-1.48,1.615-1.043,2.629l2.414,5.588c-1.133,0.133-2.285,0.018-3.375-0.418c-1.73-0.686-3.09-2.004-3.826-3.711c-0.436-1.02-1.617-1.48-2.627-1.045C2.76,7.718,2.293,8.894,2.73,9.907c1.158,2.69,3.297,4.766,6.023,5.848c1.311,0.52,2.682,0.779,4.051,0.779c0.816,0,1.631-0.113,2.434-0.299l2.164,5.01c-4.293-2.783-9.488-3.082-11.42-3.051l-1.555,0.057l-0.326,1.521C4.01,20.201,1.914,30.304,7.174,35.564c1.613,1.617,3.836,2.688,6.627,3.196c0,0.019,0,0.033,0,0.052c0,12.321,16.357,23.899,17.053,24.387L32,64l1.146-0.801c0.694-0.486,17.055-12.064,17.055-24.387c0-0.019,0-0.033,0-0.051c2.789-0.511,5.012-1.58,6.625-3.195C62.09,30.304,59.992,20.2,59.9,19.773l-0.604-1.584h-1.614c-1.681,0-6.806,0.281-11.084,3.059l2.166-5.012C49.566,16.421,50.379,16.535,51.195,16.535z"
+		    />
+		<path class="face"
+		    d="M56.25,22.263c0.34,2.984,0.289,7.936-2.252,10.475c-1.293,1.293-3.348,2.066-6.109,2.297l-1.965,0.162l0.209,2.723c0.031,0.289,0.068,0.58,0.068,0.893c0,8.566-10.637,17.5-14.201,20.254c-3.564-2.754-14.199-11.688-14.199-20.254c0-0.317,0.037-0.612,0.07-0.91l0.213-2.702l-1.971-0.164c-2.764-0.229-4.818-1.004-6.109-2.297c-2.529-2.529-2.582-7.492-2.246-10.482c2.266,0.188,6.391,0.912,9.105,3.623c0.471,0.473,0.877,0.984,1.232,1.52l1.549,2.316l1.699-2.207c2.637-3.424,6.422-5.309,10.656-5.309c4.235,0,8.021,1.885,10.658,5.309l1.702,2.213l1.548-2.326c0.354-0.533,0.76-1.045,1.225-1.512C49.82,23.201,53.881,22.46,56.25,22.263z"
+		    />
+	  	<g class="eyes">
+		    <circle class="eye"
+		            cx="25.915" 
+		            cy="36.719" 
+		            r="1.964"
+		            />
+		    <circle class="eye"
+		            cx="38.086" 
+		            cy="36.719" 
+		            r="1.963"
+		            />
+	  	</g>
+		<circle class="outline"
+			cx="32" 
+			cy="47.504" 
+			r="6.938"
+			/>
+		<circle class="nose"
+			cx="32" 
+			cy="47.504" 
+			r="4.998"
+			/>
+		<path class="nose-highlight"
+		    d="M30.986,48.574c-1.115,0-2.018-0.904-2.018-2.014c0-1.115,0.902-2.019,2.018-2.019c1.109,0,2.012,0.901,2.012,2.019C32.998,47.67,32.096,48.574,30.986,48.574z"
+		    />
+	</svg>
+</body>
+</html>

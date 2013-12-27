@@ -1,0 +1,630 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol, ul {
+  list-style: none;
+}
+blockquote, q {
+  quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* Global */
+html, body { height: 100%; }
+
+svg { 
+  width: 100%;
+  height: 100%; 
+}
+
+.card{
+  width: 80%;
+  margin: 50px auto;
+  text-align: center; 
+}
+
+.wrap { 
+  width: 18%;
+  height: 25%;  
+  display: inline-block; 
+  vertical-align: top; 
+  box-sizing: border-box; 
+  padding: 1%;
+}
+
+.wrap-bell { width: 24%;}
+.wrap-message { width: 100%;}
+
+/* BELL */
+
+.svg-bell .fill { fill: hsl(48, 89%, 50%); }
+
+.svg-bell .group-bell {
+	-webkit-animation-name: bellring;
+	-webkit-animation-duration: 3s; 
+	-webkit-animation-iteration-count: infinite;
+	-webkit-animation-timing-function: ease-in-out;
+	-webkit-animation-delay: -1.5s;
+	-webkit-animation-direction: alternate;
+	-webkit-transform-origin: 50%;
+
+	animation-name: bellring;
+	animation-duration: 3s; 
+	animation-iteration-count: infinite;
+	animation-timing-function: ease-in-out;
+	animation-delay: -1.5s;
+	animation-direction: alternate;
+	transform-origin: 50%;
+	
+	-moz-animation: none;
+}
+
+@-webkit-keyframes bellring { 
+	0% { -webkit-transform: rotateZ(27deg); }
+	100% { -webkit-transform: rotateZ(-27deg); }
+}
+
+@keyframes bellring { 
+	0% { transform: rotateZ(27deg); }
+	100% { transform: rotateZ(-27deg); }
+}
+
+.svg-bell .group-striker {
+	-webkit-animation-name: striker;
+	-webkit-animation-duration: 3s; 
+	-webkit-animation-iteration-count: infinite;
+	-webkit-animation-timing-function: linear;
+	-webkit-animation-delay: -1.5s;
+	-webkit-animation-direction: alternate;
+	-webkit-transform-origin: 50%;
+	
+
+	animation-name: striker;
+	animation-duration: 3s; 
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+	animation-delay: -1.5s;
+	animation-direction: alternate;
+	transform-origin: 50%;
+
+	-moz-animation: none;
+}
+
+@-webkit-keyframes striker { 
+	0% { -webkit-transform: translateX(3px); }
+	100% { -webkit-transform: translateX(-3px); }
+}
+
+@keyframes striker { 
+	0% { transform: translateX(3px); }
+	100% { transform: translateX(-3px); }
+}
+
+/* RUDOLPH */
+
+.svg-rudolph .face { fill: #bc8c51; }
+.svg-rudolph .nose { fill: hsl(6, 63%, 46%); }
+.svg-rudolph .nose-highlight { fill: #ffffff; }
+
+.svg-rudolph .nose {
+	-webkit-animation-name: nose-glow;
+	-webkit-animation-duration: 6s;
+	-webkit-animation-iteration-count: infinite;
+	-webkit-animation-timing-function: ease-in-out;
+	-webkit-animation-direction: alternate;
+
+	animation-name: nose-glow;
+	animation-duration: 6s;
+	animation-iteration-count: infinite;
+	animation-timing-function: ease-in-out;
+	animation-direction: alternate;
+
+	-moz-animation: none;
+}
+
+@-webkit-keyframes nose-glow { 
+	0% { fill: hsl(6, 93%, 16%); }
+	50% { fill: hsl(6, 93%, 56%); }
+	100% { fill: hsl(6, 93%, 56%); }
+}
+
+@keyframes nose-glow { 
+	0% { fill: hsl(6, 93%, 16%); }
+	50% { fill: hsl(6, 93%, 56%); }
+	100% { fill: hsl(6, 93%, 56%); }
+}
+
+.svg-rudolph .nose-highlight {
+	fill-opacity: 0;
+
+	-webkit-animation-name: highlight-fade;
+	-webkit-animation-duration: 6s;
+	-webkit-animation-iteration-count: infinite;
+	-webkit-animation-timing-function: ease-in-out;
+	-webkit-animation-direction: alternate;
+
+	animation-name: highlight-fade;
+	animation-duration: 6s;
+	animation-iteration-count: infinite;
+	animation-timing-function: ease-in-out;
+	animation-direction: alternate;
+
+	-moz-animation: none;
+}
+
+@-webkit-keyframes highlight-fade { 
+	0% { fill-opacity: 0; }
+	25% { fill-opacity: 0; }
+	100% { fill-opacity: 1; }
+}
+
+@keyframes highlight-fade { 
+	0% { fill-opacity: 0; }
+	25% { fill-opacity: 0; }
+	100% { fill-opacity: 1; }
+}
+
+.svg-rudolph .eye {
+	-webkit-animation-name: blink;
+	-webkit-animation-duration: 8s;
+	-webkit-animation-iteration-count: infinite; 
+	-webkit-transform-origin: 50%;
+
+	animation-name: blink;
+	animation-duration: 8s;
+	animation-iteration-count: infinite; 
+	transform-origin: 50%;
+
+	-moz-animation: none;
+}
+
+@-webkit-keyframes blink { 
+	0% { -webkit-transform: scaleX(1) scaleY(1); } 
+	1% { -webkit-transform: scaleX(1.3) scaleY(0.1); } 
+	2% { -webkit-transform: scaleX(1) scaleY(1); } 
+	60% { -webkit-transform: scaleX(1) scaleY(1); } 
+	61% { -webkit-transform: scaleX(1.3) scaleY(0.1);} 
+	62% { -webkit-transform: scaleX(1) scaleY(1); } 
+	100% { -webkit-transform: scaleX(1) scaleY(1); }
+}
+
+
+@keyframes blink { 
+	0% { transform: scaleX(1) scaleY(1); } 
+	1% { transform: scaleX(1.3) scaleY(0.1); } 
+	2% { transform: scaleX(1) scaleY(1); } 
+	60% { transform: scaleX(1) scaleY(1); } 
+	61% { transform: scaleX(1.3) scaleY(0.1);} 
+	62% { transform: scaleX(1) scaleY(1); } 
+	100% { transform: scaleX(1) scaleY(1); }
+}
+
+/* SANTA */
+
+.svg-santa .hat-top { fill: hsl(6, 63%, 46%); }
+.svg-santa .hat-base { fill: hsl(6, 63%, 46%); }
+.svg-santa .hatband { fill: #ffffff; }
+.svg-santa .hat-ball { fill: #ffffff; }
+.svg-santa .face { fill: #f9cdcd; }
+.svg-santa .beard { fill: #ffffff; }
+.svg-santa .eye { fill: hsl(204, 64%, 34%); }
+
+.svg-santa .eye { 
+	-webkit-animation-name: blink;
+	-webkit-animation-duration: 8s;
+	-webkit-animation-iteration-count: infinite; 
+	-webkit-transform-origin: 50%;
+	-webkit-animation-delay: 3s;
+
+	animation-name: blink;
+	animation-duration: 8s;
+	animation-iteration-count: infinite; 
+	transform-origin: 50%;
+	animation-delay: 3s;
+
+	-moz-animation: none;
+}
+
+.svg-santa .mouth {
+  -webkit-animation-name: hohoho;
+  -webkit-animation-duration: 6s;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-timing-function: ease-in-out;
+  -webkit-transform-origin: 50%;
+
+  animation-name: hohoho;
+  animation-duration: 6s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+  transform-origin: 50%;
+}
+
+@-webkit-keyframes hohoho { 
+  0% { -webkit-transform: scaleY(1.1) scaleX(1.2); } 
+  5% {  -webkit-transform: scaleY(2) scaleX(.9); } 
+  10% {  -webkit-transform: scaleY(1.1) scaleX(1); } 
+  15% {  -webkit-transform: scaleY(2) scaleX(.9); } 
+  20% {  -webkit-transform: scaleY(1.1) scaleX(1); } 
+  27% {  -webkit-transform: scaleY(2) scaleX(.95); } 
+  27% {  -webkit-transform: scaleY(2) scaleX(.95); } 
+  27.5% {  -webkit-transform: scaleY(2) scaleX(.95); } 
+  43% {  -webkit-transform: scaleY(1.1) scaleX(1.2); } 
+  100% {  -webkit-transform: scaleY(1.1) scaleX(1.2); } 
+}
+
+@keyframes hohoho { 
+  0%  { transform: scaleY(1.1) scaleX(1.2); } 
+  5% {  transform: scaleY(2) scaleX(.9); } 
+  10% {  transform: scaleY(1.1) scaleX(1); } 
+  15% {  transform: scaleY(2) scaleX(.9); } 
+  20% {  transform: scaleY(1.1) scaleX(1); } 
+  27% {  transform: scaleY(2) scaleX(.95); } 
+  27% {  transform: scaleY(2) scaleX(.95); } 
+  27.5% {  transform: scaleY(2) scaleX(.95); } 
+  43% {  transform: scaleY(1.1) scaleX(1.2); } 
+  100% {  transform: scaleY(1.1) scaleX(1.2); } 
+}
+
+/* SNOWGLOBE */
+
+.svg-snowglobe .snow { 
+  fill: #ffffff; 
+  fill-opacity: 0;
+}
+
+.svg-snowglobe .base { fill: hsl(145, 63%, 22%); }
+.svg-snowglobe .globe { fill: hsl(214, 57%, 85%); }
+.svg-snowglobe .water { fill: hsl(216, 45%, 51%); }
+
+.svg-snowglobe .snow { 
+  -webkit-animation-name: snowfall;
+  -webkit-animation-duration: 10s;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-timing-function: ease-in;
+  
+  animation-name: snowfall;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in;
+  
+}
+
+.svg-snowglobe .snow:nth-child(1) { 
+  -webkit-animation-delay: 2s; 
+  animation-delay: 2s; 
+}
+.svg-snowglobe .snow:nth-child(2) { 
+  -webkit-animation-delay: 4s; 
+  animation-delay: 4s; 
+  
+}
+.svg-snowglobe .snow:nth-child(3) { 
+  -webkit-animation-delay: 6s; 
+  animation-delay: 6s; 
+}
+.svg-snowglobe .snow:nth-child(4) { 
+  -webkit-animation-delay: 8s; 
+  animation-delay: 8s; 
+}
+.svg-snowglobe .snow:nth-child(5) { 
+  -webkit-animation-delay: 10s;
+  animation-delay: 10s;
+}
+.svg-snowglobe .snow:nth-child(6) { 
+  -webkit-animation-delay: 12s;
+  animation-delay: 12s;
+}
+.svg-snowglobe .snow:nth-child(7) { 
+  -webkit-animation-delay: 14s;
+  animation-delay: 14s;
+}
+.svg-snowglobe .snow:nth-child(8) { 
+  -webkit-animation-delay: 16s; 
+  animation-delay: 16s; 
+}
+.svg-snowglobe .snow:nth-child(9) { 
+  -webkit-animation-delay: 18s;
+  animation-delay: 18s;
+}
+.svg-snowglobe .snow:nth-child(10) { 
+  -webkit-animation-delay: 20s;
+  animation-delay: 20s;
+}
+
+@-webkit-keyframes snowfall { 
+  0% { fill-opacity: 0; }
+  25% { fill-opacity: 1; }
+  50% { -webkit-transform: translateY(25px); fill-opacity: 0; }
+  100% { fill-opacity: 0 }
+}
+
+@keyframes snowfall { 
+  0% { fill-opacity: 0; }
+  25% { fill-opacity: 1; }
+  50% { transform: translateY(25px); fill-opacity: 0; }
+  100% { fill-opacity: 0 }
+}
+
+/* ANGEL */
+
+.angel .halo { fill: hsl(48, 89%, 50%); }
+.angel .robe { fill: #ffffff; }
+.angel .face { fill: #f9cdcd; }
+.angel .wing { fill: #ffffff; }
+.angel .robe-edge { fill: hsl(48, 89%, 50%); }
+
+
+.angel .halo { 
+	-webkit-animation-name: float;
+	-webkit-animation-duration: 6s;
+	-webkit-animation-iteration-count: infinite;
+	-webkit-animation-timing-function: ease-in-out;
+	-webkit-animation-direction: alternate;
+
+	animation-name: float;
+	animation-duration: 6s;
+	animation-iteration-count: infinite;
+	animation-timing-function: ease-in-out;
+	animation-direction: alternate;
+}
+
+.angel {
+	-webkit-animation-name: float;
+	-webkit-animation-duration: 6s;
+	-webkit-animation-iteration-count: infinite;
+	-webkit-animation-timing-function: ease-in-out;
+	-webkit-animation-direction: alternate-reverse;
+
+	animation-name: float;
+	animation-duration: 6s;
+	animation-iteration-count: infinite;
+	animation-timing-function: ease-in-out;
+	animation-direction: alternate-reverse;
+}
+
+@-webkit-keyframes float {
+	100% { -webkit-transform: translateY(8px); } 
+}
+
+@keyframes float {
+	100% { transform: translateY(8px); } 
+}
+
+/* TREE */
+
+.svg-tree .tree-body { fill: hsl(145, 63%, 32%) }
+.svg-tree .tree-trunk { fill: hsl(145, 23%, 15%); }
+.svg-tree .light-blue {fill: hsl(204, 70%, 23%); }
+.svg-tree .light-yellow {fill: hsl(204, 70%, 23%); }
+.svg-tree .light-orange {fill: hsl(204, 70%, 23%); }
+.svg-tree .light-red {fill: hsl(204, 70%, 23%); }
+.svg-tree .light-green {fill: hsl(204, 70%, 23%); }
+
+/* WREATH */
+
+.svg-wreath .bow > * { fill: hsl(6, 63%, 46%); }
+.svg-wreath .body,
+.svg-wreath .wreath-fill { fill: hsl(145, 63%, 32%)  }
+.svg-wreath .wreath-light { fill: hsl(6, 63%, 46%); }
+
+/* LIGHT */
+.svg-light .base { fill: hsl(145, 63%, 22%); }
+
+.svg-light--blue .bulb,
+.svg-wreath .light-blue,
+.svg-tree .light-blue
+{ fill: hsl(204, 70%, 23%); }
+
+.svg-light--red .bulb,
+.svg-wreath .light-red,
+.svg-tree .light-red
+{   fill: hsl(6, 63%, 16%); }
+
+.svg-light--yellow .bulb,
+.svg-wreath .light-yellow,
+.svg-tree .light-yellow
+{ fill: hsl(48, 89%, 20%); }
+
+.svg-light--orange .bulb,
+.svg-wreath .light-orange,
+.svg-tree .light-orange
+{ fill: hsl(28, 90%, 22%); }
+
+.svg-light--green .bulb,
+.svg-wreath .light-green,
+.svg-tree .light-green
+{ fill: hsl(145, 83%, 32%); }
+
+/* ANIMATIONS */
+.svg-light .bulb,
+.svg-wreath .light,
+.svg-tree .light {
+	-webkit-animation-duration: 1s;
+	-webkit-animation-iteration-count: infinite;
+	-webkit-animation-timing-function: ease-in-out;
+	-webkit-animation-direction: alternate;
+
+	animation-duration: 1s;
+	animation-iteration-count: infinite;
+	animation-timing-function: ease-in-out;
+	animation-direction: alternate;
+}
+
+.svg-light--blue .bulb,
+.svg-tree .light-blue,
+.svg-wreath .light-blue { 
+	-webkit-animation-name: glow-blue; 
+	animation-name: glow-blue; 
+}
+
+.svg-light--red .bulb,
+.svg-tree .light-red,
+.svg-wreath .light-red  {
+	-webkit-animation-name: glow-red;
+	-webkit-animation-delay: .5s;
+	-webkit-animation-duration: 1.25s;
+
+	animation-name: glow-red;
+	animation-delay: .5s;
+	animation-duration: 1.25s;
+}
+
+.svg-light--yellow .bulb,
+.svg-tree .light-yellow,
+.svg-wreath .light-yellow {
+	-webkit-animation-name: glow-red;
+	-webkit-animation-delay: .5s;
+	-webkit-animation-duration: 1.25s;
+
+	animation-name: glow-yellow;
+	animation-delay: 1s;
+	animation-duration: 0.75s;
+}
+
+.svg-light--orange .bulb,
+.svg-tree .light-orange,
+.svg-wreath .light-orange {
+	-webkit-animation-name: glow-orange;
+	-webkit-animation-delay: .5s;
+	-webkit-animation-duration: 1.5s;
+
+	animation-name: glow-orange;
+	animation-delay: .5s;
+	animation-duration: 1.5s;
+}
+
+.svg-light--green .bulb,
+.svg-tree .light-green,
+.svg-wreath .light-green {
+	-webkit-animation-name: glow-green;
+	-webkit-animation-delay: 1.25s;
+
+	animation-name: glow-green;
+	animation-delay: 1.25s;
+}
+
+@-webkit-keyframes glow-blue {
+	100% { fill: hsl(204, 80%, 73%); }
+}
+
+@-webkit-keyframes glow-red {
+	100% { fill: hsl(6, 63%, 56%); }
+}
+
+@-webkit-keyframes glow-yellow {
+	100% { fill: hsl(48, 89%, 70%); }
+}
+
+@-webkit-keyframes glow-orange {
+	100% { fill: hsl(28, 90%, 62%); }
+}
+
+@-webkit-keyframes glow-green {
+	100% { fill: hsl(145, 83%, 56%); }
+}
+
+@keyframes glow-blue {
+	100% { fill: hsl(204, 80%, 73%); }
+}
+
+@keyframes glow-red {
+	100% { fill: hsl(6, 63%, 56%); }
+}
+
+@keyframes glow-yellow {
+	100% { fill: hsl(48, 89%, 70%); }
+}
+
+@keyframes glow-orange {
+	100% { fill: hsl(28, 90%, 62%); }
+}
+
+@keyframes glow-green {
+	100% { fill: hsl(145, 83%, 56%); }
+}
+
+
+/* MESSAGE */
+
+.svg-message .text {
+	stroke-width: 1;
+	stroke: hsl(6, 63%, 36%);
+	stroke-dasharray: 1865.753px 1865.753px; 
+	stroke-dashoffset:  1865.753px ;
+	fill-opacity: 0;
+	fill: hsl(6, 63%, 36%);
+
+	-webkit-animation-name: stroke, fill;  
+	-webkit-animation-duration: 8s;
+	-webkit-animation-iteration-count: infinite;
+	-webkit-animation-timing-function: ease-in-out;
+	-webkit-animation-fill-mode: forwards;
+
+	animation-name: stroke, fill;  
+	animation-duration: 8s;
+	animation-iteration-count: infinite;
+	animation-timing-function: ease-in-out;
+	animation-fill-mode: forwards;
+}
+
+.svg-message .border {
+	fill: hsl(6, 63%, 36%);
+}
+
+@-webkit-keyframes stroke {
+	0% { stroke-dashoffset:  1865.753px; }
+	50% { stroke-dashoffset: 0 } 
+	100% { stroke-dashoffset: 0 }
+}
+
+@-webkit-keyframes fill {
+	0% { fill-opacity: 0; }
+	50% { fill-opacity: 1; }
+	100% { fill-opacity: 1; } 
+}
+
+@keyframes stroke {
+	0% { stroke-dashoffset:  1865.753px; }
+	50% { stroke-dashoffset: 0 } 
+	100% { stroke-dashoffset: 0 }
+}
+
+@keyframes fill {
+	0% { fill-opacity: 0; }
+	50% { fill-opacity: 1; }
+	100% { fill-opacity: 1; } 
+}
+
